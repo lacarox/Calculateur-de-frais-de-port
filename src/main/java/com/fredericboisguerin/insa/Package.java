@@ -21,10 +21,10 @@ public abstract class Package {
     public static void main(String[] args){
 
         PackageFactory packFact = new PackageFactory();
-        Package p1 = packFact.createPackage(191,123,18,2.354);
-        Package p2 = packFact.createPackage(253,215,164,1.565);
-        Package p3 = packFact.createPackage(653,133,271,2.132);
-        Package p4 = packFact.createPackage(653,331,271,3.650);
+        Package p1 = PackageFactory.createPackage(191,123,18,2.354);
+        Package p2 = PackageFactory.createPackage(253,215,164,1.565);
+        Package p3 = PackageFactory.createPackage(653,133,271,2.132);
+        Package p4 = PackageFactory.createPackage(653,331,271,3.650);
 
         ShippingCostsCalculator calc = new ShippingCostsCalculator();
         System.out.println("p1 "+p1.getClass()+" (To FR) : "+calc.calculateShippingCost(p1,Destination.FR));
